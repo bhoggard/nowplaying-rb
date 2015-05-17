@@ -3,6 +3,7 @@ ruby '2.2.2'
 
 gem 'sinatra'
 gem 'nokogiri'
+gem 'nori'
 gem 'json'
 
 group :test, :development do

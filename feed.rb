@@ -1,5 +1,5 @@
 require 'net/http'
-require 'nokogiri'
+require 'nori'
 require 'json'
 
 class Feed
@@ -17,7 +17,15 @@ class Feed
 
   attr_accessor :feed_data
 
-  def parse
+  def format
+    self.class.format
+  end
+
+  def feed_url
+    self.class.feed_url
+  end
+
+  def read
     if format == :json
       read_json
     else
@@ -26,13 +34,13 @@ class Feed
   end
 
   def read_json
-    uri = URI(@@feed_url)
+    uri = URI(feed_url)
     self.feed_data = JSON.parse(Net::HTTP.get(uri))
   end
 
   def read_xml
-    uri = URI(@@feed_url)
-    self.feed_data = Nokogiri::XML(Net::HTTP.get(uri))
+    uri = URI(feed_url)
+    self.feed_data = Nori.new.parse(Net::HTTP.get(uri))
   end
 end
 

@@ -6,10 +6,12 @@ Rake::TestTask.new do |t|
   t.test_files = FileList['test/**/*_test.rb']
 end
 
-task :rubocop do
-  require 'rubocop'
-  cli = RuboCop::CLI.new
-  cli.run(%w(--auto-correct -D))
-end
+unless ENV['RACK_ENV'] == 'production'
+  desc 'Run RuboCop'
+  RuboCop::RakeTask.new(:rubocop) do |task|
+    task.fail_on_error = true
+    task.options = %w(-D --auto-correct)
+  end
 
-task default: [:rubocop, :test]
+  task default: [:rubocop, :test]
+end

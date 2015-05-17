@@ -1,5 +1,6 @@
 require 'sinatra/base'
- 
+require_relative 'feed'
+
 class NowPlaying < Sinatra::Base
   set :root, File.expand_path("#{File.dirname(__FILE__)}/../app")
   set :public_folder, 'public'

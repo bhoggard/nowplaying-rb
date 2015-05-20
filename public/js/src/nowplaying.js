@@ -32,5 +32,18 @@ var Piece = React.createClass({
   }
 });
 
-React.render(<Piece source="/counterstream" name="Counterstream Radio" url="http://counterstreamradio.net/" />, 
-             document.getElementById('counterstream'));
+var AllPieces = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <Piece source="/counterstream" name="Counterstream Radio" url="http://counterstreamradio.net/" />
+        <Piece source="/earwaves" name="Earwaves" url="http://somafm.com/earwaves/" />
+        <Piece source="/q2" name="Q2 Music" url="http://q2music.org/" />
+        <Piece source="/second-inversion" name="Second Inversion" url="http://secondinversion.org/" />
+        <Piece source="/yle" name="Yle Klassinen" url="http://yle.fi/aihe/klassinen" />
+      </div>
+    );
+  }
+})
+
+React.render(<AllPieces />, document.getElementById("pieces"));

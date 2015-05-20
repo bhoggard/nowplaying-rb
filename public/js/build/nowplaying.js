@@ -8,12 +8,17 @@ var Piece = React.createClass({displayName: "Piece",
   },
 
   componentDidMount: function() {
+    this.loadData();
+    setInterval(this.loadData, 60 * 1000);
+  },
+
+  loadData: function() {
     $.get(this.props.source, function(result) {
       this.setState({
         title: result.title,
         composer: result.composer
       });
-    }.bind(this));   
+    }.bind(this));
   },
 
   render: function() {

@@ -10,4 +10,5 @@ group :test, :development do
   gem 'minitest'
   gem 'rubocop', require: false
   gem 'shotgun'
+  gem 'rack-test'
 end

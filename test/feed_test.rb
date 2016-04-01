@@ -16,12 +16,12 @@ end
 describe Counterstream do
   before do
     @feed = Counterstream.new
-    @feed.feed_data = Nori.new.parse(File.read('test/data/counterstream.xml'))
+    @feed.feed_data = JSON.parse(File.read('test/data/counterstream.json'))
   end
 
   it "parses the feed" do
-    @feed.translate_feed.must_equal(title: 'Serenade',
-                                    composer: 'Edward T. Cone')
+    @feed.translate_feed.must_equal(title: 'Cadenza On The Night Plain',
+                                    composer: 'Terry Riley')
   end
 end
 

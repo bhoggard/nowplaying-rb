@@ -45,12 +45,12 @@ class Feed
 end
 
 class Counterstream < Feed
-  feed 'http://www.live365.com/pls/front?handler=playlist&cmd=view&viewType=xml&handle=amcenter&maxEntries=1'
-  feed_format :xml
+  feed 'http://counterstreamradio.net/admin/services.php?q=current_track'
+  feed_format :json
 
   def translate_feed
-    entry = feed_data['Playlist']['PlaylistEntry']
-    { title: entry['Title'], composer: entry['Artist'] }
+    entry = feed_data['TrackInfo']
+    { title: entry['Track'], composer: entry['Composer'] }
   end
 end
 

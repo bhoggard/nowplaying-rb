@@ -37,6 +37,7 @@ var AllPieces = React.createClass({displayName: "AllPieces",
     return (
       React.createElement("div", null, 
         React.createElement(Piece, {source: "/counterstream", name: "Counterstream Radio", url: "http://counterstreamradio.net/"}), 
+        React.createElement(Piece, {source: "/dronezone", name: "Dronze Zone", url: "http://somafm.com/dronezone/"}), 
         React.createElement(Piece, {source: "/earwaves", name: "Earwaves", url: "http://somafm.com/earwaves/"}), 
         React.createElement(Piece, {source: "/q2", name: "Q2 Music", url: "http://q2music.org/"}), 
         React.createElement(Piece, {source: "/second-inversion", name: "Second Inversion", url: "http://secondinversion.org/"}), 

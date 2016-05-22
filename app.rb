@@ -29,6 +29,10 @@ class NowPlaying < Sinatra::Base
     output_feed(Counterstream)
   end
 
+  get '/dronezone' do
+    output_feed(DroneZone)
+  end
+
   get '/earwaves' do
     output_feed(Earwaves)
   end

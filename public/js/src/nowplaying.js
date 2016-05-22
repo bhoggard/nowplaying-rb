@@ -37,6 +37,7 @@ var AllPieces = React.createClass({
     return (
       <div>
         <Piece source="/counterstream" name="Counterstream Radio" url="http://counterstreamradio.net/" />
+        <Piece source="/dronezone" name="Dronze Zone" url="http://somafm.com/dronezone/" />
         <Piece source="/earwaves" name="Earwaves" url="http://somafm.com/earwaves/" />
         <Piece source="/q2" name="Q2 Music" url="http://q2music.org/" />
         <Piece source="/second-inversion" name="Second Inversion" url="http://secondinversion.org/" />

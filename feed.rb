@@ -54,6 +54,16 @@ class Counterstream < Feed
   end
 end
 
+class DroneZone < Feed
+  feed 'http://api.somafm.com/recent/dronezone.tre.xml'
+  feed_format :xml
+
+  def translate_feed
+    entry = feed_data['event']
+    { title: entry['title'], composer: entry['artist'] }
+  end
+end
+
 class Earwaves < Feed
   feed 'http://api.somafm.com/recent/earwaves.tre.xml'
   feed_format :xml

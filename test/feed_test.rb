@@ -39,20 +39,6 @@ describe Earwaves do
   end
 end
 
-describe SecondInversion do
-  before do
-    @feed = SecondInversion.new
-    @feed.feed_data = Nori.new.parse(
-      File.read('test/data/second-inversion.xml')
-    )
-  end
-
-  it "parses the feed" do
-    @feed.translate_feed.must_equal(title: 'Violin Sonata No.1',
-                                    composer: 'Frederic Delius')
-  end
-end
-
 describe Yle do
   before do
     @feed = Yle.new

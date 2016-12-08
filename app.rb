@@ -41,10 +41,6 @@ class NowPlaying < Sinatra::Base
     output_feed(Q2)
   end
 
-  get '/second-inversion' do
-    output_feed(SecondInversion)
-  end
-
   get '/yle' do
     output_feed(Yle)
   end

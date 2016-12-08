@@ -40,8 +40,7 @@ var AllPieces = React.createClass({displayName: "AllPieces",
         React.createElement(Piece, {source: "/dronezone", name: "Dronze Zone", url: "http://somafm.com/dronezone/"}), 
         React.createElement(Piece, {source: "/earwaves", name: "Earwaves", url: "http://somafm.com/earwaves/"}), 
         React.createElement(Piece, {source: "/q2", name: "Q2 Music", url: "http://q2music.org/"}), 
-        React.createElement(Piece, {source: "/second-inversion", name: "Second Inversion", url: "http://secondinversion.org/"}), 
-        React.createElement(Piece, {source: "/yle", name: "Yle Klassinen", url: "http://yle.fi/aihe/klassinen"})
+        React.createElement(Piece, {source: "/yle", name: "Yle Klassinen", url: "http://yle.fi/radio/yleklassinen/suora/"})
       )
     );
   }

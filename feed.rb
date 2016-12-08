@@ -84,16 +84,6 @@ class Q2 < Feed
   end
 end
 
-class SecondInversion < Feed
-  feed 'http://filesource.abacast.com/king/TRE/inversion2.xml'
-  feed_format :xml
-
-  def translate_feed
-    entry = feed_data['nexgen_audio_export']['audio']
-    { title: entry['title'], composer: entry['composer'] }
-  end
-end
-
 class Yle < Feed
   feed 'http://yle.fi/radiomanint/LiveXML/r17/item(0).xml'
   feed_format :xml

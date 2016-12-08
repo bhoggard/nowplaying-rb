@@ -34,7 +34,8 @@ describe Earwaves do
   it "parses the feed" do
     @feed.translate_feed.must_equal(
       title: "A Traveller's Dream Journal- Setting A",
-      composer: 'David Behrman')
+      composer: 'David Behrman'
+    )
   end
 end
 

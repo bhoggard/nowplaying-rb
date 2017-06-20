@@ -8,7 +8,7 @@ class NowPlaying < Sinatra::Base
   before do
     content_type :json
     headers 'Access-Control-Allow-Origin' => '*',
-            'Access-Control-Allow-Methods' => %w(OPTIONS GET)
+            'Access-Control-Allow-Methods' => %w[OPTIONS GET]
   end
 
   # Allow the app to serve static files from the 'public' directory in :root

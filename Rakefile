@@ -10,8 +10,8 @@ unless ENV['RACK_ENV'] == 'production'
   desc 'Run RuboCop'
   RuboCop::RakeTask.new(:rubocop) do |task|
     task.fail_on_error = true
-    task.options = %w(-D --auto-correct)
+    task.options = %w[-D --auto-correct]
   end
 
-  task default: [:rubocop, :test]
+  task default: %i[rubocop test]
 end

@@ -49,7 +49,7 @@ describe Yle do
 
   it "parses the feed" do
     # rubocop:disable LineLength
-    @feed.translate_feed.must_equal(title: "Sinfonia n:o 103 (8. Lontoon sinfonia) Es-duuri Hob.I:103 (Mit dem Paukenwirbel /Drum droll, Rummunpäristys- l. Patarumpusinfonia). 1. Adagio - Allegro con spirito /8:47. 2. Andante piu tosto allegretto /10:59. 3. Menuetti - Trio /4:54. 4. Allegro con sp",
-                                    composer: 'Haydn, Joseph [1732-1809]')
+    @feed.translate_feed.must_equal(title: "An die ferne Geliebte (Kaukaiselle rakastetulle) sarja op.98: ",
+                                    composer: 'Beethoven, Ludwig van [1770-1827]')
   end
 end
